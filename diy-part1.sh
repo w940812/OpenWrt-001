@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-# Use https:// for all feeds (git:// is blocked in GitHub Actions)
+# Add feed sources (do NOT use sed to uncomment, feeds.conf.default already has commented helloworld)
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git istore https://github.com/linkease/istore-openwrt.git' >>feeds.conf.default
