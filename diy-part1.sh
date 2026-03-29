@@ -13,7 +13,7 @@
 # Uncomment a feed source
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-# Add feed sources
+# Add feed sources (use https:// for GitHub Actions compatibility)
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 echo 'src-git istore https://github.com/linkease/istore-openwrt.git' >>feeds.conf.default
