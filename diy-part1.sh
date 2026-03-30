@@ -19,3 +19,5 @@ echo 'src-git passwall https://github.com/Openwrt-Passwall/openwrt-passwall' >>f
 echo 'src-git istore https://github.com/linkease/istore' >>feeds.conf.default
 # OpenClash (alternative source in case helloworld doesn't have latest)
 echo 'src-git openclash https://github.com/vernesong/OpenClash' >>feeds.conf.default
+# nikki (Mihomo transparent proxy)
+echo 'src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki' >>feeds.conf.default
