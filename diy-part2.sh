@@ -13,12 +13,6 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 
-# Modify default theme
-#sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
-
-# Modify hostname
-#sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
-
 # Remove packages incompatible with kernel 6.12 or with broken dependencies
 # ksmbd 3.5.4 does not compile with Linux kernel 6.12+ (struct file_lock API changes)
 rm -rf package/kernel/ksmbd
@@ -26,3 +20,6 @@ rm -rf feeds/packages/net/ksmbd-tools
 rm -rf feeds/luci/applications/luci-app-ksmbd
 # autosamba depends on luci-app-ksmbd which we removed above
 rm -rf package/lean/autosamba
+
+# Install additional dependencies for some plugins
+# Make sure we have git for OpenClash
